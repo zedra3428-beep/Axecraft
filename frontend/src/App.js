@@ -1,53 +1,59 @@
-import { useEffect } from "react";
+import React from 'react';
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
-  return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+import { Toaster } from 'sonner';
+import { ThemeProvider } from './context/ThemeContext';
+import ParallaxBackground from './components/ParallaxBackground';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import GamesPage from './pages/GamesPage';
+import RulesPage from './pages/RulesPage';
+import StaffPage from './pages/StaffPage';
+import ShopPage from './pages/ShopPage';
+import LeaderboardPage from './pages/LeaderboardPage';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <ThemeProvider>
+      <div className="App relative min-h-screen overflow-x-hidden">
+        {/* Parallax Background */}
+        <ParallaxBackground />
+        
+        {/* Toast Notifications */}
+        <Toaster 
+          position="top-right" 
+          toastOptions={{
+            style: {
+              background: 'rgba(0, 0, 0, 0.8)',
+              backdropFilter: 'blur(16px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              color: 'white'
+            }
+          }}
+        />
+        
+        <BrowserRouter>
+          {/* Navigation */}
+          <Navigation />
+          
+          {/* Main Content */}
+          <main className="relative">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/jeux" element={<GamesPage />} />
+              <Route path="/regles" element={<RulesPage />} />
+              <Route path="/staff" element={<StaffPage />} />
+              <Route path="/boutique" element={<ShopPage />} />
+              <Route path="/classement" element={<LeaderboardPage />} />
+            </Routes>
+          </main>
+          
+          {/* Footer */}
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </ThemeProvider>
   );
 }
 
