@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-01-08T20:39:36.398001",
+  "total_tests": 11,
+  "passed_tests": 11,
+  "success_rate": 100.0,
+  "failed_tests": [],
+  "detailed_results": {
+    "API Root": {
+      "success": true,
+      "details": "Message: Bienvenue sur l'API Axecraft !",
+      "timestamp": "2026-01-08T20:39:35.803064"
+    },
+    "Server Stats": {
+      "success": true,
+      "details": "Players: 4/100",
+      "timestamp": "2026-01-08T20:39:35.844292"
+    },
+    "Minigames List": {
+      "success": true,
+      "details": "Found 5 games",
+      "timestamp": "2026-01-08T20:39:35.878142"
+    },
+    "Individual Game": {
+      "success": true,
+      "details": "BedWars game retrieved",
+      "timestamp": "2026-01-08T20:39:35.910509"
+    },
+    "Staff List": {
+      "success": true,
+      "details": "Found 4 staff members",
+      "timestamp": "2026-01-08T20:39:35.986409"
+    },
+    "Shop Items": {
+      "success": true,
+      "details": "Found 5 shop items",
+      "timestamp": "2026-01-08T20:39:36.022129"
+    },
+    "Shop Categories": {
+      "success": true,
+      "details": "Found 3 grade items",
+      "timestamp": "2026-01-08T20:39:36.053975"
+    },
+    "Reviews List": {
+      "success": true,
+      "details": "Found 4 reviews",
+      "timestamp": "2026-01-08T20:39:36.087275"
+    },
+    "Create Review": {
+      "success": true,
+      "details": "Review created successfully",
+      "timestamp": "2026-01-08T20:39:36.143817"
+    },
+    "Leaderboard": {
+      "success": true,
+      "details": "Found 10 entries",
+      "timestamp": "2026-01-08T20:39:36.362548"
+    },
+    "Rules": {
+      "success": true,
+      "details": "Found 8 rules in 6 categories",
+      "timestamp": "2026-01-08T20:39:36.397308"
+    }
+  }
+}
