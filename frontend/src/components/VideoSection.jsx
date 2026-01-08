@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import ReactPlayer from 'react-player/youtube';
+import ReactPlayer from 'react-player';
 import { Play, Volume2, VolumeX } from 'lucide-react';
 
 const VideoSection = () => {
