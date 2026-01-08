@@ -1,0 +1,130 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Anti-AI Designer",
+    "principles": [
+      "Fusion over Imitation: Mix Minecraft blockiness with Ethereal Bioluminescence.",
+      "Emotion First: The site must feel like 'discovering a secret cave'.",
+      "Content is King: Every scroll triggers a narrative shift (Surface -> Underground).",
+      "Negative Space: Don't clutter. Let the background breathe.",
+      "Contrast: Neon Cyan against Deep Rock Blue."
+    ],
+    "anti_patterns": [
+      "No generic 'Dirt Block' backgrounds.",
+      "No standard Bootstrap grids.",
+      "No 'Inter' for headings.",
+      "No static backgrounds - everything must feel alive."
+    ]
+  },
+  "typography": {
+    "headings": {
+      "family": "Unbounded",
+      "weights": ["400", "700", "900"],
+      "usage": "Hero titles, Section headers, Game names",
+      "letterSpacing": "tracking-tight"
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": ["400", "500", "600"],
+      "usage": "Paragraphs, UI elements, Stats",
+      "letterSpacing": "tracking-normal"
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "usage": "IP Address, Code snippets, Server stats"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": {
+        "day": "#10B981",
+        "night": "#0EA5E9",
+        "cave": "#22D3EE"
+      },
+      "secondary": {
+        "day": "#38BDF8",
+        "night": "#1E3A8A",
+        "cave": "#F472B6"
+      },
+      "background": {
+        "day": "#F0FDF4",
+        "night": "#020617",
+        "cave": "#0B1120"
+      },
+      "surface": {
+        "day": "#FFFFFF",
+        "night": "#0F172A",
+        "cave": "#1E293B"
+      },
+      "accent": {
+        "cherry": "#F472B6",
+        "gold": "#FBBF24",
+        "danger": "#EF4444"
+      }
+    },
+    "gradients": {
+      "cave_glow": "linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(34,211,238,0.1) 100%)",
+      "cherry_fall": "radial-gradient(circle, rgba(244,114,182,0.4) 0%, rgba(0,0,0,0) 70%)"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid (Mode A for Games, Mode B for Stats)",
+    "spacing": "Generous (p-8 to p-24)",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "parallax": {
+      "layers": [
+        { "z": 0, "speed": 0.1, "content": "Sky/Cave Wall" },
+        { "z": 10, "speed": 0.3, "content": "Hills/Stalactites" },
+        { "z": 20, "speed": 0.5, "content": "Cherry Tree/Vines" }
+      ]
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all duration-300 rounded-xl font-unbounded",
+      "secondary": "bg-secondary/10 text-secondary hover:bg-secondary/20 border border-secondary/20 backdrop-blur-md rounded-xl font-unbounded",
+      "ip_copy": "group relative overflow-hidden bg-black/40 border border-white/10 hover:border-primary/50 transition-all duration-300 rounded-2xl p-4 flex items-center gap-4 cursor-pointer"
+    },
+    "cards": {
+      "glass": "bg-black/20 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 rounded-3xl",
+      "game_card": "relative h-[400px] w-full overflow-hidden rounded-3xl transition-all duration-500 hover:flex-[2] group"
+    },
+    "navigation": {
+      "style": "Floating Glass Pill",
+      "position": "fixed top-6 left-1/2 -translate-x-1/2 z-50",
+      "classes": "bg-black/50 backdrop-blur-2xl border border-white/10 rounded-full px-6 py-3 flex items-center gap-8"
+    }
+  },
+  "assets": {
+    "logo": "https://customer-assets.emergentagent.com/job_54b6345b-423a-49ea-bf1f-8a8d2a7b8112/artifacts/c6eh7b7g_149gWZj%20-%20Imgur.png",
+    "video": "https://youtu.be/gojb7k4AD5I",
+    "placeholders": {
+      "cherry_tree": "https://images.unsplash.com/photo-1664892288046-1bbd8aa5662e?q=80&w=1000&auto=format&fit=crop",
+      "cave_bg": "https://images.unsplash.com/photo-1516934024742-b461fba47600?q=80&w=1000&auto=format&fit=crop",
+      "bedwars": "https://images.unsplash.com/photo-1671891773063-cebac7950ff5?q=80&w=1000&auto=format&fit=crop",
+      "skywars": "https://images.unsplash.com/photo-1706980023581-babac35ff92d?q=80&w=1000&auto=format&fit=crop"
+    }
+  },
+  "visual_enhancers": {
+    "particles": "tsparticles (Falling Cherry Petals)",
+    "lighting": "CSS box-shadow for bioluminescence",
+    "texture": "Subtle noise overlay (opacity 0.03) on all dark backgrounds"
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'framer-motion', 'lucide-react', 'clsx', 'tailwind-merge', 'react-player'.",
+    "2. THEME: Implement the 'Day/Night' context provider. It must check system time but allow manual toggle.",
+    "3. BACKGROUND: Create a 'ParallaxBackground' component. It should have 3 layers. Top layer is the Cherry Blossom Tree. Use Framer Motion 'useScroll' and 'useTransform'.",
+    "4. HERO: Center the Logo. Add the 'IP Copy' button below it. The button must have a 'Copied!' animation state.",
+    "5. GAMES: Build the 'GameAccordion' component. Vertical slices that expand on hover. Use the placeholder images provided.",
+    "6. STATS: Create a 'LiveStats' component. Mock the data (4 players online). Use a 'pulse' animation for the 'Online' indicator.",
+    "7. FOOTER: Massive footer with the 'Axecraft' logo in text-9xl opacity-5.",
+    "8. CRITICAL: Ensure the 'Plains -> Cave' transition happens smoothly on scroll. Use a gradient overlay that fades in as user scrolls down."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for text unless it's a very subtle shine.",
+    "Always add 'data-testid' to interactive elements.",
+    "Use 'sonner' for toast notifications (e.g., 'IP Copied').",
+    "Never use 'alert()' or native confirm dialogs.",
+    "Ensure all images have 'alt' tags."
+  ]
+}
